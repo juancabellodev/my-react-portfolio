@@ -25,6 +25,35 @@
 body {
   background: #0f0f0f;
 }
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #7d3925 50%, #201a1a 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -35,13 +64,13 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: rgb(29, 25, 16);
+  /* background: rgb(29, 25, 16);
   background: linear-gradient(
     180deg,
     rgba(29, 25, 16, 1) 59%,
     rgba(68, 34, 6, 1) 100%
-  );
-  background: #161415 url(../images/header-background.jpg) no-repeat top center;
+  ); */
+  /* background: #161415 url(../images/header-background.jpg) no-repeat top center; */
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -362,7 +391,7 @@ ul#nav li.current a {
 
   margin: 0;
   padding-right: 24px;
-  background: #313131;
+  background: #11abb0;
   display: inline-block;
   height: 42px;
   line-height: 42px;
@@ -1146,7 +1175,7 @@ call-to-action .button {
 footer {
   padding-top: 48px;
   margin-bottom: 48px;
-  color: #303030;
+  color: #fff;
   font-size: 14px;
   text-align: center;
   position: relative;
@@ -1154,11 +1183,12 @@ footer {
 
 footer a,
 footer a:visited {
-  color: #525252;
+  color: #fff;
+  text-decoration: underline;
 }
 footer a:hover,
 footer a:focus {
-  color: #fff;
+  color: #0f9095;
 }
 
 /* copyright */
@@ -1179,7 +1209,7 @@ footer .copyright li:before {
   content: "\2022";
   padding-left: 10px;
   padding-right: 10px;
-  color: #095153;
+  color: #fff;
 }
 footer .copyright li:first-child:before {
   display: none;
